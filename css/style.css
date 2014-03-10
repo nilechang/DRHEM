@@ -24,6 +24,7 @@
 	{
 		font-weight: 300;
 		color: #52575c;
+		outline: none;
 	}
 	
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -200,6 +201,15 @@
 			{
 				opacity: 0.85;
 			}
+			
+			.image.hospitals
+			{
+				display: block;
+				margin: 0px;
+				padding: 15px;
+				width: 100%;
+			}
+
 
 	/* Lists */
 
@@ -1095,282 +1105,61 @@
 				color: #fff;
 			}
 			
+
 /*********************************************************************************/
-/* Curriculum                                                                    */
+/* Accordion                                                                       */
 /*********************************************************************************/
 
-.zerofont {
-    font-size: 0px;
-}
+#accordion .ui-accordion-content {  
+    width: 100%;  
+    background-color: #f3f3f3;  
+    color: #777;  
+    font-size: 15pt;  
+    line-height: 25pt;  
+    padding: 30px;
+}  
 
-#curriculum {
-	font-size:40px;
-}
-
-.headings {
-	font-size: 30px;
-}
-
-.blocks {
-    display: inline-block;
+#accordion .ui-accordion-header {  
     background-color: #74baff;
-    height: 40px;
-    font-size: 15px;
-    font-weight:600;
-    text-align: center;
-    line-height: 35px;
-}
-.blocks:hover {
-    background-color: #2f17ce;
-    color: white;
-}
-.blurb {
-    float:left;
-    position: absolute;
-    visibility: hidden;
-    font-size: 20px;
-    margin-right: 15%;
+    padding: 5px 0px 5px 40px;
+    margin: 3px;  
+}  
+
+#accordion .ui-accordion-header a {  
+    color: #fff;  
+    line-height: 42px;  
+    display: block;  
+    font-size: 12pt;  
+    width: 100%;  
+    text-indent: 10px;  
+}  
+
+#accordion .ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+	border: 1px solid #aaaaaa;
+	background-color: #2980b9;
+	font-weight: normal;
+	color: #ffffff;
 }
 
-#introtext-1 {
-	float: left;
-	position: relative;
-	display: block;
-	font-size: 20px;
+#accordion .ui-accordion .ui-accordion-icons {
+	padding-left: 2.2em;
 }
 
-#introtext-2 {
-	float: left;
-	position: relative;
-	display: block;
-	font-size: 20px;
+#accordion .ui-accordion .ui-accordion-noicons {
+	padding-left: .7em;
 }
 
-#introtext-3 {
-	float: left;
-	position: relative;
-	display: block;
-	font-size: 20px;
+#accordion .ui-accordion .ui-accordion-icons .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+#accordion .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -8px;
 }
-
-#Orientation {
-	width: 86px;
-}
-#Orientation:hover ~ #OrientationBlurb {
-	visibility: visible;
-}
-#Orientation:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#ED-1 {
-    width:170px;
-}
-#ED-1:hover ~ #ED-1Blurb {
-    visibility: visible;
-}
-#ED-1:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#Peds {
-	width: 170px;
-}
-
-#Peds:hover ~ #PedsBlurb {
-	visibility: visible;
-}
-#Peds:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#Ortho {
-	width: 86px;
-}
-
-#Ortho:hover ~ #OrthoBlurb {
-	visibility: visible;
-}
-#Ortho:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#Trauma {
-	width: 86px;
-}
-
-#Trauma:hover ~ #TraumaBlurb {
-	visibility: visible;
-}
-#Trauma:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#MICU {
-	width: 86px;
-}
-
-#MICU:hover ~ #MICUBlurb {
-	visibility: visible;
-}
-#MICU:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#NeuroICU {
-	width: 86px;
-}
-#NeuroICU:hover ~ #NeuroICUBlurb {
-	visibility: visible;
-}
-#NeuroICU:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-
-#Ultrasound {
-    width: 86px;
-}
-#Ultrasound:hover ~ #UltrasoundBlurb {
-	visibility: visible;
-}
-#Ultrasound:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#Anesthesia {
-	width: 86px;
-}
-#Anesthesia:hover ~ #AnesthesiaBlurb {
-	visibility: visible;
-}
-#Anesthesia:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#OBGYN {
-	width: 86px;
-}
-#OBGYN:hover ~ #OBGYNBlurb {
-	visibility: visible;
-}
-#OBGYN:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#Elective-1 {
-	width: 86px;
-}
-#Elective-1:hover ~ #Elective-1Blurb {
-	visibility: visible;
-}
-#Elective-1:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#Vacation-1 {
-	width:  86px;
-}
-#Vacation-1:hover ~ #Vacation-1Blurb {
-	visibility: visible;
-}
-#Vacation-1:hover ~ #introtext-1 {
-	visibility:hidden;
-}
-
-#ED-2 {
-	width: 770px;
-}
-#ED-2:hover ~ #ED-2Blurb {
-	visibility: visible;
-}
-#ED-2:hover ~ #introtext-2 {
-	visibility: hidden;
-}
-
-#CC {
-	width: 86px;
-}
-#CC:hover ~ #CCBlurb {
-	visibility: visible;
-}
-#CC:hover ~ #introtext-2 {
-	visibility: hidden;
-}
-
-#MICU-2 {
-	width: 86px;
-}
-#MICU-2:hover ~ #MICU-2Blurb {
-	visibility: visible;
-}
-#MICU-2:hover ~ #introtext-2 {
-	visibility: hidden;
-}
-
-#PICU {
-	width: 86px;
-}
-#PICU:hover ~ #PICUBlurb {
-	visibility: visible;
-}
-#PICU:hover ~ #introtext-2 {
-	visibility: hidden;
-}
-
-#Elective-2 {
-	width: 86px;
-}
-#Elective-2:hover ~ #Elective-2Blurb {
-	visibility: visible;
-}
-#Elective-2:hover ~ #introtext-2 {
-	visibility:hidden;
-}
-
-#Vacation-2 {
-	width:  86px;
-}
-#Vacation-2:hover ~ #Vacation-2Blurb {
-	visibility: visible;
-}
-#Vacation-2:hover ~ #introtext-2 {
-	visibility:hidden;
-}
-
-#ED-3 {
-	width: 942px;
-}
-#ED-3:hover ~ #ED-3Blurb {
-	visibility: visible;
-}
-#ED-3:hover ~ #introtext-3 {
-	visibility: hidden;
-}
-
-#Elective-3 {
-	width: 172px;
-}
-#Elective-3:hover ~ #Elective-3Blurb {
-	visibility: visible;
-}
-#Elective-3:hover ~ #introtext-3 {
-	visibility:hidden;
-}
-
-#Vacation-3 {
-	width:  86px;
-}
-#Vacation-3:hover ~ #Vacation-3Blurb {
-	visibility: visible;
-}
-#Vacation-3:hover ~ #introtext-3 {
-	visibility:hidden;
-}
-
-/*********************************************************************************/
-/* Profile                                                                       */
-/*********************************************************************************/
 
 
 
